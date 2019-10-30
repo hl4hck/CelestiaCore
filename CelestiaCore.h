@@ -42,6 +42,6 @@ FOUNDATION_EXPORT const unsigned char CelestiaCoreVersionString[];
 
 #import <CelestiaCore/CelestiaEclipseFinder.h>
 #import <CelestiaCore/CelestiaStarBrowser.h>
-#import <CelestiaCore/CelestiaStarCatalog.h>
+#import <CelestiaCore/CelestiaCatalog.h>
 
 #import <CelestiaCore/CelestiaFavorite.h>

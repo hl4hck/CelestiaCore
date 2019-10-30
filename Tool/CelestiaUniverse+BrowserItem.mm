@@ -15,7 +15,7 @@
 @implementation CelestiaUniverse (BrowserItem)
 
 - (NSDictionary *)childrenForBrowserItem:(CelestiaBrowserItem *)item {
-    CelestiaCatEntry *entry = [item entry];
+    CelestiaObject *entry = [item object];
     if (entry == nil)
         return nil;
 
@@ -52,7 +52,7 @@
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
-            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithCatEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
+            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithObject:[[CelestiaBody alloc] initWithBody:body] provider:self];
             int bodyClass  = body->getClassification();
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
             switch (bodyClass)
@@ -150,7 +150,7 @@
             Body* body = sys->getBody(i);
             if (body->getName().empty())
                 continue;
-            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithCatEntry:[[CelestiaBody alloc] initWithBody:body] provider:self];
+            CelestiaBrowserItem *item = [[CelestiaBrowserItem alloc] initWithObject:[[CelestiaBody alloc] initWithBody:body] provider:self];
             int bodyClass  = body->getClassification();
             NSString *name = [NSString stringWithUTF8String:body->getName(true).c_str()];
 
@@ -212,7 +212,7 @@
              iter != locations->end(); iter++)
         {
             CelestiaLocation *location = [[CelestiaLocation alloc] initWithLocation:*iter];
-            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithCatEntry:location provider:nil] forKey:[location name]];
+            [locationDictionary setObject:[[CelestiaBrowserItem alloc] initWithObject:location provider:nil] forKey:[location name]];
         }
         if ([locationDictionary count] > 0) {
             NSString *name = NSLocalizedStringFromTable(@"Locations",@"po",@"");

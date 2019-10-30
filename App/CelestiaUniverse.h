@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class CelestiaSelection;
-@class CelestiaStarCatalog;
+@class CelestiaCatalog;
 
 
 typedef NS_ENUM(NSUInteger, CelestiaMarkerRepresentation) {
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaUniverse : NSObject
 
-@property (readonly) CelestiaStarCatalog *starCatalog;
+@property (readonly) CelestiaCatalog *catalog;
 
 - (CelestiaSelection *)find:(NSString *)name;
 

@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CelestiaStarCatalog : NSObject
+@interface CelestiaCatalog : NSObject
 
 @property (readonly) NSInteger count;
 

@@ -7,19 +7,19 @@
 //
 
 #import "CelestiaDSO+Private.h"
-#import "CelestiaCatEntry+Private.h"
+#import "CelestiaObject+Private.h"
 #import "CelestiaVector+Private.h"
 #import "CelestiaUtil.h"
 
 @implementation CelestiaDSO (Private)
 
 - (instancetype)initWithDSO:(DeepSkyObject *)aDSO {
-    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(aDSO)];
+    self = [super initWithObject:reinterpret_cast<AstroObject *>(aDSO)];
     return self;
 }
 
 - (DeepSkyObject *)DSO {
-    return reinterpret_cast<DeepSkyObject *>([self entry]);
+    return reinterpret_cast<DeepSkyObject *>([self object]);
 }
 
 @end

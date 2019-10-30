@@ -9,7 +9,7 @@
 #import "CelestiaUniverse.h"
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUniverse+Private.h"
-#import "CelestiaStarCatalog+Private.h"
+#import "CelestiaCatalog+Private.h"
 
 @interface CelestiaUniverse () {
     Universe *u;
@@ -55,8 +55,8 @@
     }
 }
 
-- (CelestiaStarCatalog *)starCatalog {
-    return [[CelestiaStarCatalog alloc] initWithDatabase:&u->getDatabase()];
+- (CelestiaCatalog *)catalog {
+    return [[CelestiaCatalog alloc] initWithDatabase:&u->getDatabase()];
 }
 
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection {

@@ -1,22 +1,22 @@
 //
-//  CelestiaStarCatalog.m
+//  CelestiaCatalog.m
 //  CelestiaCore
 //
 //  Created by 李林峰 on 2019/8/10.
 //  Copyright © 2019 李林峰. All rights reserved.
 //
 
-#import "CelestiaStarCatalog+Private.h"
+#import "CelestiaCatalog+Private.h"
 #import "CelestiaStar+Private.h"
 #import "CelestiaDSO+Private.h"
 
-@interface CelestiaStarCatalog () {
+@interface CelestiaCatalog () {
     AstroDatabase *d;
 }
 
 @end
 
-@implementation CelestiaStarCatalog (Private)
+@implementation CelestiaCatalog (Private)
 
 - (instancetype)initWithDatabase:(AstroDatabase *)database {
     self = [super init];
@@ -32,7 +32,7 @@
 
 @end
 
-@implementation CelestiaStarCatalog
+@implementation CelestiaCatalog
 
 - (NSInteger)count {
     return d->size();

@@ -15,7 +15,7 @@
 
 @interface CelestiaBrowserItem ()
 
-@property CelestiaCatEntry *catEntry;
+@property CelestiaObject *object;
 @property NSString *stringValue;
 
 @property (weak) id<CelestiaBrowserItemChildrenProvider> childrenProvider;
@@ -27,10 +27,10 @@
 
 @implementation CelestiaBrowserItem
 
-- (instancetype)initWithCatEntry:(CelestiaCatEntry *)entry provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
+- (instancetype)initWithObject:(CelestiaObject *)object provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
     self = [super init];
     if (self) {
-        _catEntry = entry;
+        _object = object;
         _stringValue = nil;
         _childrenProvider = provider;
     }
@@ -40,7 +40,7 @@
 - (instancetype)initWithName:(NSString *)aName provider:(id<CelestiaBrowserItemChildrenProvider>)provider {
     self = [super init];
     if (self) {
-        _catEntry = nil;
+        _object = nil;
         _stringValue = aName;
         _childrenProvider = provider;
     }
@@ -51,7 +51,7 @@
                     children:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {
     self = [super init];
     if (self) {
-        _catEntry = nil;
+        _object = nil;
         _stringValue = aName;
         _childrenDictionary = children;
         _childrenKeys = [[children allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
@@ -63,8 +63,8 @@
     return _stringValue;
 }
 
-- (CelestiaCatEntry *)entry {
-    return _catEntry;
+- (CelestiaObject *)object {
+    return _object;
 }
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {

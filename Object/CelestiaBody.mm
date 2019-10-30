@@ -8,7 +8,7 @@
 
 #import "CelestiaBody.h"
 #import "CelestiaBody+Private.h"
-#import "CelestiaCatEntry+Private.h"
+#import "CelestiaObject+Private.h"
 #import "CelestiaOrbit+Private.h"
 #import "CelestiaRotationModel+Private.h"
 #import "CelestiaPlanetarySystem+Private.h"
@@ -20,12 +20,12 @@
 @implementation CelestiaBody (Private)
 
 - (CelestiaBody*)initWithBody:(Body *)body {
-    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(body)];
+    self = [super initWithObject:reinterpret_cast<AstroObject *>(body)];
     return self;
 }
 
 -(Body *)body {
-    return reinterpret_cast<Body *>([self entry]);
+    return reinterpret_cast<Body *>([self object]);
 }
 
 @end

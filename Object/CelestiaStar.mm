@@ -8,7 +8,7 @@
 
 #import "CelestiaStar.h"
 #import "CelestiaStar+Private.h"
-#import "CelestiaCatEntry+Private.h"
+#import "CelestiaObject+Private.h"
 #import "CelestiaUniversalCoord+Private.h"
 #import "CelestiaUtil.h"
 
@@ -16,12 +16,12 @@
 
 - (instancetype)initWithStar:(Star *)star
 {
-    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(star)];
+    self = [super initWithObject:reinterpret_cast<AstroObject *>(star)];
     return self;
 }
 
 - (Star *)star {
-    return reinterpret_cast<Star *>([self entry]);
+    return reinterpret_cast<Star *>([self object]);
 }
 
 @end
