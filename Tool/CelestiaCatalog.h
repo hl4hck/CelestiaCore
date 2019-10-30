@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaCatalog : NSObject
 
-@property (readonly) NSInteger count;
+@property (readonly) NSArray<CelestiaStar *> *stars;
+@property (readonly) NSArray<CelestiaDSO *> *DSOs;
 
 - (CelestiaStar *)starAtIndex:(NSInteger)index;
 - (CelestiaDSO *)dsoAtIndex:(NSInteger)index;

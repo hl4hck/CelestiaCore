@@ -34,8 +34,22 @@
 
 @implementation CelestiaCatalog
 
-- (NSInteger)count {
-    return d->size();
+- (NSArray<CelestiaStar *> *)stars {
+    NSMutableArray *array = [NSMutableArray array];
+    AstroObject::List stars = d->getStars();
+    for (AstroObject *obj : stars) {
+        [array addObject:[[CelestiaStar alloc] initWithStar:(Star *)obj]];
+    }
+    return array;
+}
+
+- (NSArray<CelestiaDSO *> *)DSOs {
+    NSMutableArray *array = [NSMutableArray array];
+    AstroObject::List dsos = d->getDsos();
+    for (AstroObject *obj : dsos) {
+        [array addObject:[[CelestiaDSO alloc] initWithDSO:(DeepSkyObject *)obj]];
+    }
+    return array;
 }
 
 - (CelestiaStar *)starAtIndex:(NSInteger)index {
