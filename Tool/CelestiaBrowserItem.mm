@@ -15,7 +15,6 @@
 
 @interface CelestiaBrowserItem ()
 
-@property CelestiaObject *object;
 @property NSString *stringValue;
 
 @property (weak) id<CelestiaBrowserItemChildrenProvider> childrenProvider;
@@ -61,10 +60,6 @@
 
 - (NSString *)name {
     return _stringValue;
-}
-
-- (CelestiaObject *)object {
-    return _object;
 }
 
 - (void)setChildren:(NSDictionary<NSString *, CelestiaBrowserItem *> *)children {

@@ -380,6 +380,8 @@
 		97B2980B236959B200CA9AA6 /* stardataloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B29809236959B200CA9AA6 /* stardataloader.h */; };
 		97B2980E236959BD00CA9AA6 /* xindexdataloader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B2980C236959BC00CA9AA6 /* xindexdataloader.cpp */; };
 		97B2980F236959BD00CA9AA6 /* xindexdataloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B2980D236959BD00CA9AA6 /* xindexdataloader.h */; };
+		97B29815236964BF00CA9AA6 /* celx_name.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97B29813236964BF00CA9AA6 /* celx_name.cpp */; };
+		97B29816236964BF00CA9AA6 /* celx_name.h in Headers */ = {isa = PBXBuildFile; fileRef = 97B29814236964BF00CA9AA6 /* celx_name.h */; };
 		97C62C2423374F4E00953522 /* CelestiaObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C62C2223374F4E00953522 /* CelestiaObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97C62C2523374F4E00953522 /* CelestiaObserver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2323374F4E00953522 /* CelestiaObserver.mm */; };
 		97C62C2923374F6700953522 /* CelestiaObserver+Private.h in Sources */ = {isa = PBXBuildFile; fileRef = 97C62C2723374F6700953522 /* CelestiaObserver+Private.h */; };
@@ -766,6 +768,8 @@
 		97B29809236959B200CA9AA6 /* stardataloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stardataloader.h; sourceTree = "<group>"; };
 		97B2980C236959BC00CA9AA6 /* xindexdataloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xindexdataloader.cpp; sourceTree = "<group>"; };
 		97B2980D236959BD00CA9AA6 /* xindexdataloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xindexdataloader.h; sourceTree = "<group>"; };
+		97B29813236964BF00CA9AA6 /* celx_name.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = celx_name.cpp; sourceTree = "<group>"; };
+		97B29814236964BF00CA9AA6 /* celx_name.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = celx_name.h; sourceTree = "<group>"; };
 		97C62C2223374F4E00953522 /* CelestiaObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CelestiaObserver.h; sourceTree = "<group>"; };
 		97C62C2323374F4E00953522 /* CelestiaObserver.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CelestiaObserver.mm; sourceTree = "<group>"; };
 		97C62C2723374F6700953522 /* CelestiaObserver+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CelestiaObserver+Private.h"; sourceTree = "<group>"; };
@@ -1258,6 +1262,8 @@
 				977D836E22FDB2E6002FF1C2 /* celx_internal.h */,
 				977D838E22FDB2E8002FF1C2 /* celx_misc.cpp */,
 				977D837122FDB2E6002FF1C2 /* celx_misc.h */,
+				97B29813236964BF00CA9AA6 /* celx_name.cpp */,
+				97B29814236964BF00CA9AA6 /* celx_name.h */,
 				977D838C22FDB2E8002FF1C2 /* celx_object.cpp */,
 				977D837622FDB2E7002FF1C2 /* celx_object.h */,
 				977D836F22FDB2E6002FF1C2 /* celx_observer.cpp */,
@@ -1465,6 +1471,7 @@
 				971A671323019C26009E4EA1 /* 3dsmodel.h in Headers */,
 				971A666923019C15009E4EA1 /* rotation.h in Headers */,
 				971A660F23019BFC009E4EA1 /* mesh.h in Headers */,
+				97B29816236964BF00CA9AA6 /* celx_name.h in Headers */,
 				971A665323019C0F009E4EA1 /* resmanager.h in Headers */,
 				971A664D23019C0F009E4EA1 /* filetype.h in Headers */,
 				971A672123019C2B009E4EA1 /* plane.h in Headers */,
@@ -1753,6 +1760,7 @@
 				971A66B923019C20009E4EA1 /* lodspheremesh.cpp in Sources */,
 				971A661F23019C03009E4EA1 /* celx_misc.cpp in Sources */,
 				971A66BB23019C20009E4EA1 /* marker.cpp in Sources */,
+				97B29815236964BF00CA9AA6 /* celx_name.cpp in Sources */,
 				971A668623019C20009E4EA1 /* boundaries.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
