@@ -9,7 +9,6 @@
 #import "CelestiaUniverse.h"
 #import "CelestiaSelection+Private.h"
 #import "CelestiaUniverse+Private.h"
-#import "CelestiaDSOCatalog+Private.h"
 #import "CelestiaStarCatalog+Private.h"
 
 @interface CelestiaUniverse () {
@@ -44,11 +43,11 @@
     const Selection sel = [selection selection];
     switch (sel.getType()) {
         case Selection::Type_Star:
-            return [NSString stringWithUTF8String:u->getStarCatalog()->getStarName(*sel.star(), true).c_str()];
+            return [NSString stringWithUTF8String:u->getDatabase().getObjectName(sel.star(), true).c_str()];
         case Selection::Type_Body:
             return [NSString stringWithUTF8String:sel.body()->getName(true).c_str()];
         case Selection::Type_DeepSky:
-            return [NSString stringWithUTF8String:u->getDSOCatalog()->getDSOName(sel.deepsky(), true).c_str()];
+            return [NSString stringWithUTF8String:u->getDatabase().getObjectName(sel.deepsky(), true).c_str()];
         case Selection::Type_Location:
             return [NSString stringWithUTF8String:sel.location()->getName(true).c_str()];
         default:
@@ -56,12 +55,8 @@
     }
 }
 
-- (CelestiaDSOCatalog *)dsoCatalog {
-    return [[CelestiaDSOCatalog alloc] initWithDatabase:u->getDSOCatalog()];
-}
-
 - (CelestiaStarCatalog *)starCatalog {
-    return [[CelestiaStarCatalog alloc] initWithDatabase:u->getStarCatalog()];
+    return [[CelestiaStarCatalog alloc] initWithDatabase:&u->getDatabase()];
 }
 
 - (BOOL)isSelectionMarked:(CelestiaSelection *)selection {

@@ -10,13 +10,13 @@
 #import "CelestiaCatEntry+Private.h"
 
 @interface CelestiaCatEntry () {
-    CatEntry *c;
+    AstroObject *c;
 }
 @end
 
 @implementation CelestiaCatEntry (Private)
 
-- (instancetype)initWithCatEntry:(CatEntry *)entry {
+- (instancetype)initWithCatEntry:(AstroObject *)entry {
     self = [super init];
     if (self) {
         c = entry;
@@ -24,7 +24,7 @@
     return self;
 }
 
-- (CatEntry *)entry {
+- (AstroObject *)entry {
     return c;
 }
 

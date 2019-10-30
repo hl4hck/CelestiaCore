@@ -7,15 +7,15 @@
 //
 
 #import "CelestiaStarCatalog.h"
-#include "celengine/stardb.h"
+#include "celengine/astrodb.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaStarCatalog (Private)
 
-- (instancetype)initWithDatabase:(StarDatabase *)database;
+- (instancetype)initWithDatabase:(AstroDatabase *)database;
 
-- (StarDatabase *)database;
+- (AstroDatabase *)database;
 
 @end
 

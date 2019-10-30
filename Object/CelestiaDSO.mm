@@ -14,7 +14,7 @@
 @implementation CelestiaDSO (Private)
 
 - (instancetype)initWithDSO:(DeepSkyObject *)aDSO {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(aDSO)];
+    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(aDSO)];
     return self;
 }
 

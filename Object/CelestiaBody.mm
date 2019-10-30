@@ -20,7 +20,7 @@
 @implementation CelestiaBody (Private)
 
 - (CelestiaBody*)initWithBody:(Body *)body {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(body)];
+    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(body)];
     return self;
 }
 

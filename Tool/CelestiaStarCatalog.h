@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class CelestiaStar;
+@class CelestiaDSO;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,9 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readonly) NSInteger count;
 
-- (CelestiaStar *)objectAtIndex:(NSInteger)index;
+- (CelestiaStar *)starAtIndex:(NSInteger)index;
+- (CelestiaDSO *)dsoAtIndex:(NSInteger)index;
 
 - (NSString *)starName:(CelestiaStar *)star;
+- (NSString *)dsoName:(CelestiaDSO *)dso;
 
 - (NSArray<NSString *> *)completionForName:(NSString *)name NS_SWIFT_NAME(completion(for:));
 

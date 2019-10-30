@@ -12,7 +12,7 @@
 @implementation CelestiaLocation (Private)
 
 -(instancetype)initWithLocation:(Location *)aLocation {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(aLocation)];
+    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(aLocation)];
     return self;
 }
 

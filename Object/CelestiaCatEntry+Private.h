@@ -7,14 +7,14 @@
 //
 
 #import "CelestiaCatEntry.h"
-#include <celengine/catentry.h>
+#include <celengine/astroobj.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaCatEntry (Private)
 
-- (instancetype)initWithCatEntry:(CatEntry *)entry;
-- (CatEntry *)entry;
+- (instancetype)initWithCatEntry:(AstroObject *)entry;
+- (AstroObject *)entry;
 
 @end
 

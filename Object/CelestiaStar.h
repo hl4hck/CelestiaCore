@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CelestiaStar : CelestiaCatEntry
 
-@property unsigned int catalogNumber;
 @property float luminosity;
 
 @property (readonly) float radius;

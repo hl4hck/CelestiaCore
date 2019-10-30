@@ -16,7 +16,7 @@
 
 - (instancetype)initWithStar:(Star *)star
 {
-    self = [super initWithCatEntry:reinterpret_cast<CatEntry *>(star)];
+    self = [super initWithCatEntry:reinterpret_cast<AstroObject *>(star)];
     return self;
 }
 
@@ -30,14 +30,6 @@
     void setStellarClass(StellarClass);
 */
 @implementation CelestiaStar
-
-- (void)setCatalogNumber:(unsigned int)catalogNumber {
-    [self star]->setCatalogNumber(catalogNumber);
-}
-
-- (unsigned int)catalogNumber {
-    return  [self star]->getCatalogNumber();
-}
 
 - (float)radius {
     return [self star]->getRadius();
