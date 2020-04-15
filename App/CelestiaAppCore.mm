@@ -256,6 +256,8 @@ private:
     bind_textdomain_codeset("celestia", "UTF-8");
     bindtextdomain("celestia_constellations", [localeDirectory UTF8String]);
     bind_textdomain_codeset("celestia_constellations", "UTF-8");
+    bindtextdomain("celestia_app", [localeDirectory UTF8String]);
+    bind_textdomain_codeset("celestia_app", "UTF-8");
     textdomain("celestia");
 }
 

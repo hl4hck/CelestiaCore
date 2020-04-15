@@ -18,5 +18,8 @@ NSString *LocalizedFilename(NSString *originalName)
 
 NSString *LocalizedString(NSString *originalString)
 {
-    return [NSString stringWithUTF8String:_([originalString UTF8String])];
+    textdomain("celestia_app");
+    NSString *localized = [NSString stringWithUTF8String:_([originalString UTF8String])];
+    textdomain("celestia");
+    return localized;
 }
