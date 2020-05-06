@@ -142,9 +142,9 @@ extension CelestiaDSOCatalog: Sequence {
 }
 
 // MARK: Localization
-func CelestiaString(_ key: String, comment: String) -> String {
+func CelestiaString(_ key: String, comment: String, domain: String = "celestia_ui") -> String {
     if key.isEmpty { return key }
-    return LocalizedString(key)
+    return LocalizedString(key, domain)
 }
 
 func CelestiaFilename(_ key: String) -> String {
