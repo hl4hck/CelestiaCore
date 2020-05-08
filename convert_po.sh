@@ -29,15 +29,29 @@ for po in $SRCROOT/../Celestia/po2/*.po; do
     f=${po##*/};f=${f%.*}
     LANG_ROOT=$LOCALE_ROOT/$f/LC_MESSAGES
     mkdir -p $LANG_ROOT
-    if [ $po -nt $LANG_ROOT/celestia_constellations.mo ];then
+    if [ $po -nt $LANG_ROOT/celestia_ui.mo ];then
         echo "Create $LANG_ROOT/celestia_constellations.mo"
         msgmerge --quiet --output-file=$PROJECT_TEMP_DIR/$f.po --lang=$f --sort-output $po $POT
         msgfmt -o $LANG_ROOT/celestia_constellations.mo $PROJECT_TEMP_DIR/$f.po
         DIDBUILD=1
     fi
 done
+
+POT=$SRCROOT/../Celestia/po3/celestia_ui.pot
+
+for po in $SRCROOT/../Celestia/po3/*.po; do
+    f=${po##*/};f=${f%.*}
+    LANG_ROOT=$LOCALE_ROOT/$f/LC_MESSAGES
+    mkdir -p $LANG_ROOT
+    if [ $po -nt $LANG_ROOT/celestia_ui.mo ];then
+        echo "Create $LANG_ROOT/celestia_ui.mo"
+        msgmerge --quiet --output-file=$PROJECT_TEMP_DIR/$f.po --lang=$f --sort-output $po $POT
+        msgfmt -o $LANG_ROOT/celestia_ui.mo $PROJECT_TEMP_DIR/$f.po
+        DIDBUILD=1
+    fi
+done
+
 if [ $DIDBUILD -eq 1 ];then
     echo "Touch $BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app"
     touch -c $BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app
 fi
-
